@@ -1,163 +1,138 @@
+.portfolio-work {
+	padding: 80px 0;
 
-/*----------------------
- PRoject
------------------------*/
-#projects-wrap {
-    position: relative;
-    background: url("../images/bg/banner_bg.jpg")no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
+	.block {
+		.portfolio-menu {
+			text-align: center;
 
-    p.lead{
-        color: #a9a9a9!important;
-    }
+			.btn-group {
+				margin-bottom: 40px;
+				@include desktop {
+					display: block;
+				}
+
+				label {
+					display: inline-block;
+					border: 1px solid $border-color;
+					padding: 8px 25px;
+					cursor: pointer;
+					font-size: 15px;
+					color: #333333;
+					outline: 0;
+					background: $light;
+					margin: 3px 2px;
+					border-radius: 0;
+					@include transition (all, 0.3s, ease);
+					
+					&.active {
+						background-color: $primary-color;
+						border-color: $primary-color;
+						color: $light;
+					}
+				}
+			}
+		}
+	}
 }
 
-.overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, .92);
-}
+.portfolio {
+	&-item {
+		position: relative;
+		padding: 0;
 
-.overlay.feature-overlay {
-    background-image: linear-gradient(30deg, rgba(121, 110, 255, 0.95) 0%, rgba(33, 200, 122, 0.95) 100%);
-    opacity: .9;
-}
+		img {
+			width: 100%;
+			height: auto;
+		}
 
-#projects {
-    margin-top: -60px;
-}
+		&:hover {
+			.portfolio-hover {
+				visibility: visible;
+				opacity: 1;
+			}
 
-.single-project img {
-    border-radius: 10px;
-}
+			.portfolio-content {
+				transform: translateY(-50%);
+			}
+		}
+	}
 
-.project-content {
-    text-align: center;
-    padding: 40px 20px;
-    position: relative;
-    .btn {
-        padding: .7rem 1.7rem;
-        border-radius: 25px;
-    }
-    p {
-       margin-top: 20px;
-    }
-    h4 {
-        text-transform: capitalize;
-    }
-}
+	&-hover {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background: rgba(60, 55, 55, 0.5);
+		visibility: hidden;
+		opacity: 0;
+		transition: .3s ease;
+	}
 
-.project-content-block {
-    padding: 70px 40px;
-    margin-left: -120px;
-    background: #F4F7FC;
-    position: absolute;
-    bottom: -70px;
-    border: 15px solid $light;
-    -webkit-box-shadow: 0 7px 22px rgba(0, 0, 0, 0.08);
-    box-shadow: 0 7px 22px rgba(0, 0, 0, 0.08);
-    h4 {
-        color: $primary-color;
-    }
-    p {
-        margin-top: 25px;
-    }
+	&-content {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 50%;
+		transform: translateY(-40%);
+		text-align: center;
+		padding: 20px;
+		transition: inherit;
 
-}
+		* {
+			color: $light;
+		}
 
+		a {
+			display: block;
+			transition: .2s ease;
+			&:hover {
+				color: $light;
+				opacity: .8;
+			}
 
-/*-------------------------
- PORTFOLIO-2
----------------------------*/
+			i {
+				font-size: 30px;
+			}
 
-.single-work {
-    -webkit-transition: all 300ms ease-in-out;
-    -o-transition:  all 300ms ease-in-out;
-    transition:  all 300ms ease-in-out;
-}
-
-
-
-
-.overlay-content-block{
-    position: absolute;
-    content: "";
-    bottom: 20px;
-    width: 100%;
-    left: 30px;
-    padding: 30px 20px;
-    background: $light;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: all 300ms ease-in-out;
-    -o-transition:  all 300ms ease-in-out;
-    transition:  all 300ms ease-in-out;
-    border-radius: 5px 0px 0px 5px;
-
-    a{
-        width: 50px;
-        height: 50px;
-        display: inline-block;
-        text-align: center;
-        padding-top: 12px;
-        border-radius: 100%;
-        position: absolute;
-        left: 30px;
-        top: -23px;
-        background: $primary-color;
-        color: $light;
-    }
-
-    h4{
-        margin-bottom: 0px;
-        margin-top: 10px;
-    }
-}
-
-.work-block{
-    position: relative;
-    border: 5px solid $light;
-
-    img{
-        width: 100%;
-        border-radius: 5px;
-    }
-    
-    &:hover .overlay-content-block{
-        opacity: 1;
-        visibility: visible;
-    }
+			&.h3 {
+				margin-top: 0;
+			}
+		}
+	}
 }
 
 
 
 
-/* ==============================
-  SINGEL PROJECTS
-=============================*/
+// Portfolio Single Page
+.portfolio-single-page {
+	.project-details {
+		h4 {
+			margin-bottom: 20px;
+			padding-bottom: 10px;
+			border-bottom: 2px dashed $border-color;
+		}
 
-.project-details-info{
-   margin: 40px 0px;
+		span {
+			color: #838383;
+			width: 180px;
+			display: inline-block;
+		}
+
+		strong {
+			color: #313131;
+			font-weight: normal;
+		}
+
+		ul {
+			li {
+				margin-bottom: 10px;
+			}
+		}
+	}
 }
 
-.info-block-2{
-    float: left;
-    margin-right: 65px;
-    margin-bottom: 40px;
-}
-
-.project-info ul {
-    margin-top: 40px;
-    li{
-        margin-bottom: 30px;
-        padding-right: 20px;
-    }
-}
-
-.project-lg-images img {
-    width: 100%;
+.portfolio-single-slider {
+	cursor: grab;
 }

@@ -1,103 +1,51 @@
+/*=================================================================
+  Pricing section
+==================================================================*/
 
+.pricing-table {
+  .pricing-item {
+    padding: 40px 20px;
+    background: $light;
+    box-shadow: 0 8px 15px 0 rgba(5, 57, 106, .06);
 
-/*----------------------
- PRICING
------------------------*/
-
-.price-block {
-    margin: 20px 0px 30px;
-    h2 {
-        font-size: 80px;
-        font-weight: 700;
-        position: relative;
-        display: inline-block;
-
-        small {
-            position: absolute;
-            top: 20px;
-            font-size: 16px;
-            left: -9px;
-        }
+    a.btn-main {
+      text-transform: uppercase;
+      margin-top: 20px;
     }
 
-     h6 {
-        font-size: 14px;
-        border-top: 1px solid $border-color;
-        border-bottom: 1px solid $border-color;
-        padding: 7px;
-        text-transform: capitalize;
-        width: 50%;
-        margin: 10px auto;
-
-    }
-}
-
-
-
-.price-features {
-    margin: 30px 0px 50px;
     li {
-        font-size: 16px;
-        padding: 5px 0px;
-        position: relative;
-        padding-left: 30px;
+      font-weight: 400;
+      padding: 6px 0;
+      color: #666;
 
-        &:before{
-            position: absolute;
-            content:"\f00c";
-            font-family: "Font Awesome 5 Free";
-            left: 0px;
-            top: 5px;
-            color: $primary-color;
-            font-weight: 900;
-        }
+      i {
+        margin-right: 6px;
+        color: $primary-color;
+      }
     }
+  }
+
+  .price-title {
+    padding: 30px 0 20px;
+
+    >h3 {
+      font-weight: 700;
+      margin: 0 0 5px;
+      font-size: 15px;
+      text-transform: uppercase;
+    }
+
+    >p {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+      margin-top: 5px;
+    }
+
+    .value {
+      color: $primary-color;
+      font-size: 50px;
+      padding: 10px 0;
+    }
+  }
 }
-
-
-
-.pricing-block .price-features li{
-    padding-left: 0px;
-    &:before{
-        display: none;
-    }
-}
-
-
-
-/*--------------------------
-PRICING-2
----------------------------*/
-.pricing-box{
-    border: 1px solid $border-color;
-    padding: 60px;
-    -webkit-transition: all 300ms ease-in-out;
-    -o-transition:all 300ms ease-in-out ;
-    transition:all 300ms ease-in-out ;
-
-    .price-block h2 span{
-        font-size: 12px;
-        font-weight: normal;
-        text-transform: capitalize;
-    }
-    &:hover{
-        background: rgb(29, 28, 28);
-        border-color: rgb(29, 28, 28);
-    }
-
-    &:hover .price-features li{
-        color: $border-color;
-    }
-    &:hover .price-block h2{
-        color: $light;
-    }
-    &:hover h3{
-        color: $light;
-    }
-    &:hover .btn{
-        background: $light!important;
-        color: #000!important;
-    }
-
-}
-

@@ -1,15 +1,13 @@
+.bg-1 {
+	background-image: url("../images/call-to-action-bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 
-#banner-3{
-    position: relative;
-    background: url("../images/banner/banner.jpg")no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
 }
 
-#banner-4{
-    position: relative;
-    background: url("../images/banner/banner-2.jpg")no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
+.bg-2 {
+	background: url("../images/featue-bg.jpg");
+	background-size: cover;
+	background-attachment: fixed;
 }
-

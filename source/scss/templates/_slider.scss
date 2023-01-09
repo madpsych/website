@@ -1,74 +1,46 @@
+.slider {
+  background: url("../images/slider-bg.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 10% 0%;
+  padding: 200px 0;
+  position: relative;
+  @extend .overly;
 
-/*----------------------
- BANNER STYLE
------------------------*/
+  @include desktop {
+  padding: 150px 0;
+  }
 
-.py-7 {
-    padding: 7.5rem 0;
-}
+  .block {
+    color: #E3E3E4;
+    text-align: center;
 
-.py-8 {
-    padding: 8.5rem 0;
-}
-
-
-.main-banner {
-    h5{
-        margin-bottom: 20px;
-    }
-    h1.display-4{
-        line-height: 65px;
-    }
-}
-
-
-.main-banner p.lead,
-.banner-content p.lead{
-    margin-bottom: 2.5rem!important;
-}
-
-
-
-/*-------------------------
- HOME -2 
------------------------------*/
-#banner{
-    position: relative;
-    background: url("/images/bg/banner_bg.jpg")no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-}
-
-
-.banner-content {
-    padding: 150px 0px;
-    padding-right: 30px;
-    p{
-        color: $border-color;
-        padding-right: 80px;
-        margin-bottom: 30px !important;
-    }
-    .display-4{
-        color: $light;
-        font-weight: 600;
-    }
-}
-
-
-#banner .overlay{
-    opacity: .7;
-}
-
-.banner-contact-form{
-    padding:45px 40px;
-    margin-top: 30px;
-
-    .form-control{
-        border-radius: 0px;
-        height: 45px;
+    h1 {
+      font-weight: 100;
+      font-size: 45px;
+      line-height: 60px;
+      letter-spacing: 10px;
+      padding-bottom: 15px;
+      text-transform: uppercase;
+      @include desktop {
+        font-size: 36px;
+        line-height: 46px;
+      }
+      @include tablet {
+        font-size: 32px;
+        line-height: 42px;
+      }
     }
 
-    textarea.form-control{
-        height: auto;
+    p {
+      margin-bottom: 30px;
+      color: #b9b9b9;
+      font-size: 18px;
+      line-height: 27px;
+      font-weight: 300;
+      @include desktop {
+        font-size: 16px;
+      }
     }
+  }
 }

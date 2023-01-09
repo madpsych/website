@@ -9,11 +9,7 @@
     @content;
   }
 }
-@mixin tablet-xs{
-  @media(max-width:640px){
-    @content;
-  }
-}@mixin tablet{
+@mixin tablet{
   @media(max-width:768px){
     @content;
   }
